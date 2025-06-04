@@ -1,0 +1,67 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+   
+  }
+  
+  /* Fuente base */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #2A2C2F;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  
+  /* Para centrar contenido de ancho máximo */
+  .page {
+    
+    max-width: 984px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 34px 0;
+  }
+  
+  .header__logo {
+    width: 255px;
+  height: auto;
+  }
+  .lead {
+    margin-top: 57px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 90px;
+    overflow: hidden;
+  }
+  
+  .lead__title {
+    font-size: 96px;
+    line-height: 100px;
+    font-weight: 900;
+    max-width: 720px;
+    margin: 0 auto 32px auto;
+    text-align: center;
+  }
+  
+  
+  .lead__subtitle {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    max-width: 720px;
+    margin: 0 auto 64px auto;
+  }
+  
+  .lead__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+  }
+  
