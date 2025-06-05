@@ -1,0 +1,10 @@
+.logo {
+  display: flex;
+  width: 255px;
+ 
+  
+}
+
+@media screen and (max-width: 320px) {
+  
+}
