@@ -1,6 +1,6 @@
 .lead {
   margin-top: 57px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   text-align: center;
   color: #ffffff;
   overflow: hidden; 
@@ -36,4 +36,8 @@
 
 
 @media screen and (max-width: 320px) {
+}
+
+* {
+  outline: 1px solid red; /* traza líneas rojas alrededor de todos los elementos */
 }
