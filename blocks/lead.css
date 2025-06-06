@@ -1,4 +1,7 @@
 .lead {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 57px;
   margin-bottom: 60px;
   text-align: center;
@@ -11,9 +14,9 @@
   line-height: 100px;
   font-weight: 900;
   color: #ffffff;
-  text-align: center;
   max-width: 720px;
   margin: 0 auto 32px auto;
+  text-align: center;
 }
 
 .lead__subtitle {
@@ -26,11 +29,11 @@
 }
 
 .lead__image {
- width: 100%;
+  width: 964px;  /* Tamaño visible en Figma */
   height: auto;
   display: block;
-  filter: grayscale(100%); 
-
+  margin: 0 auto; /* Centramos la imagen */
+  filter: grayscale(100%);
 }
 
 

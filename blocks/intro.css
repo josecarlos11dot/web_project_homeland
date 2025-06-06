@@ -1,19 +1,20 @@
 .intro {
-  display: flex;
-  justify-content: flex-start;
   margin-top: 32px;
-  padding-left: 148px;
-  padding-right: 282px; 
+  max-width: 964px; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .intro__content {
-  max-width: 830px;
-  height: 607px;
+  display: flex;
+  flex-direction: column;
+  max-width: 964px; 
   text-align: left;
 }
 
 .intro__title {
   font-family: "Inter", sans-serif;
+  max-width: 830px;
   font-size: 58px;
   line-height: 60px;
   font-weight: 900;
@@ -26,7 +27,7 @@
   line-height: 34px;
   font-weight: 400;
   margin: 0 0 10px 0;
-
+  width: 738px; 
 }
 
 .intro__author {
@@ -35,6 +36,7 @@
   line-height: 34px;
   font-weight: 400;
   text-align: right;
+  width: 732px; 
 }
 
 .intro__message {
@@ -43,18 +45,6 @@
   line-height: 163%;
   font-weight: 400;
   max-width: 830px;
-  margin: 0;
-   margin-top: 32px;
-}
-
-.intro__description {
-  width: 738px;
-}
-
-.intro__author {
-  width: 732px;
-}
-
-.intro__message {
-  width: 722px;
+  margin: 32px 0 0 0;
+  width: 722px; 
 }

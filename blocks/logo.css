@@ -1,8 +1,7 @@
 .logo {
-  display: flex;
-  width: 255px;
- 
-  
+  /* Asumo que la quieres centrada también (como en Figma) */
+  display: block;
+  margin: 0 auto 34px auto;
 }
 
 @media screen and (max-width: 320px) {
