@@ -1,0 +1,117 @@
+.lead {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 57px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden; 
+}
+
+.lead__title {
+  font-size: 96px;
+  line-height: 100px;
+  font-weight: 900;
+  color: #ffffff;
+  max-width: 720px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+}
+
+.lead__subtitle {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  max-width: 720px;
+  margin: 0 auto 64px auto;
+  text-align: center;
+
+}
+
+.lead__image {
+  width: 964px; 
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  filter: grayscale(100%);
+}
+
+
+@media screen and (max-width: 768px) {
+  .lead {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .lead__title {
+    width: 100%;
+    max-width: 530px; 
+    font-size: 75px; 
+    line-height: 79px;
+    font-weight: 900;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lead__subtitle {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    padding: 0 24px 30px 24px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+
+  .lead__image {
+    display: block;
+    width: 100vw; 
+    max-width: 100%;
+    height: auto;
+    max-height: 480px;
+    padding: 0 0 50px;
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .lead__title {
+    width: 100%;
+    max-width: 228px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 900;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+ .lead__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 16px 40px 16px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+}
+  .lead__image {
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    padding: 0 0 24px;
+    margin: 0 auto;
+  }
+}
