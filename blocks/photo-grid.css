@@ -11,7 +11,6 @@
 
 
 .photo-grid__item {
-  aspect-ratio: 1.33 / 1; /* forma rectangular */
   background-size: cover;
   background-position: center;
   
@@ -61,9 +60,7 @@
     box-sizing: border-box;
   }
 
-  .photo-grid__item {
-    aspect-ratio: 1.33 / 1;
-  }
+ 
 }
 
 @media screen and (max-width: 320px) {
@@ -78,14 +75,7 @@
     box-sizing: border-box;
   }
 
-  .photo-grid__item {
-    width: 100%;
-    aspect-ratio: 1.33 / 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-  }
+  
 
   
 }
