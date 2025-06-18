@@ -56,6 +56,7 @@
 
 .place-card__image {
   grid-area: image;
+  aspect-ratio: 1 / 1;
   margin-top: 48px;
   width: 100%;
   height: auto;
@@ -108,3 +109,30 @@
   cursor: pointer;
 }
 
+.place-card--burundi {
+  grid-template-areas:
+    "title author"
+    "image text"
+    "button text";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto; 
+}
+
+.place-card--burundi .place-card__button {
+  align-self: start;
+  margin-top: -100px 
+}
+
+.place-card--celaya {
+  grid-template-areas:
+    "title author"
+    "image text"
+    "button text";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto; 
+}
+
+.place-card--celaya .place-card__button {
+  align-self: start;
+  margin-top: -70px 
+}
