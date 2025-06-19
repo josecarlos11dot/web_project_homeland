@@ -1,138 +1,130 @@
 .places {
   max-width: 987px;
-  margin: 0 auto; 
-  padding-top: 92px; 
+  margin: 0 auto;
+  padding-top: 92px;
+}
+
+.places__list {
   display: flex;
   flex-direction: column;
   gap: 80px; 
 }
 
+
 .place-card {
   display: grid;
+  grid-template-columns: 460px 484px;
+  grid-template-rows: auto auto 1fr;
   grid-template-areas:
     "title author"
     "image text"
-    "button button";
-  grid-template-columns: 1fr 1fr;
-  color: #fff;
+    "button text";
+  gap: 40px;
   max-width: 987px;
-  margin: 0 auto 80px; 
+  margin: 0;
+  color: white;
 }
 
 .place-card__title {
   grid-area: title;
   font-size: 72px;
-  line-height: 1.1;
   font-weight: 900;
+  line-height: 1.1;
   margin: 0;
   align-self: end;
 }
+.place-card__paragraph {
+  margin: 0 0 25px 0; 
+  font-size: 18px;
+  line-height: 1.63;
+  font-weight: 400;
+}
 
 .place-card__author {
-  font-family: 'Inter', sans-serif;
   grid-area: author;
-  text-align:left;
-  align-self: baseline;
-  margin-top: 85px;
-  padding-left: 40px;
+  align-self: end;
+
 }
 
 .place-card__subtitle {
   font-size: 12px;
-  font-weight: 400;
-  color: #aaaaaa;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aaa;
   margin: 0;
 }
 
 .place-card__author-info {
+  font-size: 18px;
   margin-top: 8px;
   margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 22px;
 }
 
 .place-card__image {
   grid-area: image;
-  aspect-ratio: 1 / 1;
-  margin-top: 48px;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: filter 0.3s ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
-
 .place-card__image:hover {
   filter: brightness(0.85);
   cursor: pointer;
 }
 
-.place-card__button:hover {
-  opacity: 0.9;
-  cursor: pointer;
-
-}
-
 .place-card__text {
   grid-area: text;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.63;
-  margin-top: 48px;
-  padding-left: 40px;
 }
 
-.place-card__paragraph {
-  margin: 0;
-  padding-bottom: 25px;
-  padding-left: 0;
+.place-card__text p {
+  margin-bottom: 25px;
 }
 
 .place-card__button {
   grid-area: button;
+  align-self: start;
+  width: 289px;
+  padding:  13px 20px 13px 20px;
+  align-self: start;
   background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
   color: white;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
   padding: 13px 20px;
   font-weight: 600;
   font-size: 18px;
-  justify-self: start;
+  transition: 0.3s;
+  border-radius: 4px;
+  
 }
 
 .place-card__button:hover {
-  filter: brightness(0.85); 
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  filter: brightness(0.85);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 
-.place-card--burundi {
-  grid-template-areas:
-    "title author"
-    "image text"
-    "button text";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto; 
-}
+@media screen and (max-width: 768px) {
+  .place-card {
+    grid-template-columns: 340px 352px;
+    grid-template-areas:
+      "title"  "author"
+      "image"  "text"
+      "button" "text";
+    row-gap: 24px;
+  }
 
-.place-card--burundi .place-card__button {
-  align-self: start;
-  margin-top: -100px 
-}
+  .place-card__title {
+    font-size: 42px;
+    text-align: center;
+  }
 
-.place-card--celaya {
-  grid-template-areas:
-    "title author"
-    "image text"
-    "button text";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto; 
-}
+  .place-card__author {
+    text-align: center;
+  }
 
-.place-card--celaya .place-card__button {
-  align-self: start;
-  margin-top: -70px 
+  .place-card__button {
+    margin: 0 auto;
+  }
 }
