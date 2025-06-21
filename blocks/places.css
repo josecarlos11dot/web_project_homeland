@@ -109,8 +109,7 @@
   .places {
   max-width: 720px;
   padding-top: 88px;
-  padding-left: 24px;
-  padding-right: 24px; 
+  
 }
 
   .place-card {
@@ -125,7 +124,7 @@
 
   .place-card__title {
     font-size: 42px;
-    text-align:start
+    text-align:start;
   }
 
 .places__list {
@@ -133,18 +132,85 @@
   flex-direction: column;
   gap: 72px; 
 }
-  .place-card__author {
-    text-align:left
-  }
+.place-card__author {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
 
-  .place-card__button {
-    margin: 0 auto;
-  }
-
-  .place-card__paragraph {
-  
+.place-card__paragraph {
   font-size: 16px;
-  
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.place-card__button {
+  font-size: 16px;
+  width: 288px;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  margin-left: 0;
+  display: block;
+}
+ }
+@media screen and (max-width: 320px) {
+
+  .places {
+  max-width: 320px;
+  width: 100%;
+  margin: 62px auto 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ .place-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title" 
+      "author"
+      "image" 
+      "text"
+      "button" ;
+    row-gap: 30px;
+    
+  }
+.place-card__title {
+    font-size: 32px;
+    text-align: start;
+    margin-left: 16px;
+     
+  }
+  h3.place-card__title br {
+  display: none 
+}
+.places__list {
+  display: flex;
+  flex-direction: column; 
+  }
+  .place-card__author {
+   text-align: start;
+   margin-left: 16px;
+   margin-right: 16px; 
+    
+  }
+
+
+.place-card__paragraph {
+  margin-left: 16px;
+  margin-right: 16px;
   
 }
+.place-card__text p {
+  margin-bottom: 0;
+}
+
+  .place-card__button {
+    width: 288px;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+  }
+
 }
