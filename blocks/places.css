@@ -1,29 +1,29 @@
+
 .places {
   max-width: 987px;
   margin: 0 auto;
   padding-top: 92px;
+  box-sizing: border-box;
 }
 
 .places__list {
   display: flex;
   flex-direction: column;
-  gap: 80px; 
+  gap: 80px;
 }
 
-
-.place-card {
-  display: grid;
-  grid-template-columns: 460px 484px;
-  grid-template-rows: auto auto 1fr;
-  grid-template-areas:
+  .place-card {
+    display: grid;
+    grid-template-columns: 47% 49%;
+    grid-template-rows: auto auto auto; 
+    grid-template-areas:
     "title author"
     "image text"
     "button text";
-  gap: 40px;
-  max-width: 987px;
-  margin: 0;
-  color: white;
-}
+    column-gap: 40px;
+    row-gap: 48px; 
+    color: white;
+  }
 
 .place-card__title {
   grid-area: title;
@@ -33,181 +33,136 @@
   margin: 0;
   align-self: end;
 }
-.place-card__paragraph {
-  margin: 0; 
-  font-size: 18px;
-  line-height: 1.63;
-  font-weight: 400;
-}
 
 .place-card__author {
   grid-area: author;
   align-self: end;
-
-}
-
-.place-card__subtitle {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #aaa;
-  margin: 0;
-}
-
-.place-card__author-info {
   font-size: 18px;
-  margin-top: 8px;
-  margin-bottom: 0;
 }
 
 .place-card__image {
   grid-area: image;
   width: 100%;
-  aspect-ratio: 1 / 1;
   object-fit: cover;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
+
 .place-card__image:hover {
   filter: brightness(0.85);
-  cursor: pointer;
 }
 
 .place-card__text {
   grid-area: text;
   font-size: 18px;
   line-height: 1.63;
+  margin: 0
+  ;
 }
-
-
-
+.place-card__paragraph {
+ margin: 0;
+}
 .place-card__button {
   grid-area: button;
   align-self: start;
-  width: 289px;
-  padding:  13px 20px 13px 20px;
-  align-self: start;
+  max-width: 289px;
+  padding: 13px 20px;
   background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
   color: white;
   text-decoration: none;
-  padding: 13px 20px;
   font-weight: 600;
   font-size: 18px;
-  transition: 0.3s;
   border-radius: 4px;
-  
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
-
 .place-card__button:hover {
   filter: brightness(0.85);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .places {
-  max-width: 720px;
-  padding-top: 88px;
-  
-}
+    max-width: 720px;
+    padding-top: 88px;
+  }
+
+  .places__list {
+    gap: 72px;
+  }
 
   .place-card {
-    grid-template-columns: 340px 352px;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "title"  "author"
-      "image"  "text"
-      "button" "text";
-    row-gap: 48px;
+      "title author"
+      "image text"
+      "button text"
+      ". text";
     column-gap: 28px;
+    row-gap: 48px;
   }
 
   .place-card__title {
     font-size: 42px;
-    text-align:start;
   }
 
-.places__list {
-  display: flex;
-  flex-direction: column;
-  gap: 72px; 
-}
-.place-card__author {
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-}
-
-.place-card__paragraph {
-  font-size: 16px;
-  margin: 0;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.place-card__button {
-  font-size: 16px;
-  width: 288px;
-  padding: 13px 20px;
-  box-sizing: border-box;
-  margin-left: 0;
-  display: block;
-}
- }
-@media screen and (max-width: 320px) {
-
-  .places {
-  max-width: 320px;
-  width: 100%;
-  margin: 62px auto 0;
-  padding: 0;
-  box-sizing: border-box;
-}
- .place-card {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title" 
-      "author"
-      "image" 
-      "text"
-      "button" ;
-    row-gap: 30px;
-    
+  .place-card__text {
+    font-size: 16px;
   }
-.place-card__title {
-    font-size: 32px;
-    text-align: start;
-    margin-left: 16px;
-     
-  }
- 
-
-.places__list {
-  display: flex;
-  flex-direction: column; 
-  }
-  .place-card__author {
-   text-align: start;
-   margin-left: 16px;
-   margin-right: 16px; 
-    
-  }
-
-
-.place-card__paragraph {
-  margin-left: 16px;
-  margin-right: 16px;
-  
-}
-.place-card__text p {
-  margin-bottom: 0;
-}
 
   .place-card__button {
     width: 288px;
     padding: 13px 20px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .places {
+    max-width: 100%;
+    padding: 62px 0 0;
   }
 
+  .places__list {
+    gap: 8vw;
+  }
+
+  .place-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "author"
+      "image"
+      "button"
+      "text";
+    row-gap: 30px;
+  }
+
+  .place-card__title {
+    font-size: 32px;
+    margin: 0 16px;
+  }
+
+  .place-card__author {
+    margin: 0 16px;
+  }
+
+  .place-card__text {
+    font-size: 16px;
+    margin: 0 16px;
+  }
+
+  .place-card__button {
+    width: 288px;
+    padding: 13px 20px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
 }
