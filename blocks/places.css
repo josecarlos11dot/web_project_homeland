@@ -78,9 +78,7 @@
   line-height: 1.63;
 }
 
-.place-card__text p {
-  margin-bottom: 25px;
-}
+
 
 .place-card__button {
   grid-area: button;
@@ -181,9 +179,8 @@
     margin-left: 16px;
      
   }
-  h3.place-card__title br {
-  display: none 
-}
+ 
+
 .places__list {
   display: flex;
   flex-direction: column; 
