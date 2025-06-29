@@ -72,10 +72,10 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* MEDIA QUERY TABLET */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .place-card {
     grid-template-columns: 48% 48%;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "title author"
       "image text"
@@ -101,7 +101,6 @@
   }
 }
 
-/* MEDIA QUERY MOBILE */
 @media screen and (max-width: 767px) {
   .place-card {
     grid-template-columns: 1fr;
