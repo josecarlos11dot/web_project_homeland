@@ -1,0 +1,136 @@
+.place-card {
+  display: grid;
+  grid-template-columns: 47% 49%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "title author"
+    "image text"
+    "button text";
+  column-gap: 40px;
+  row-gap: 48px;
+  color: white;
+}
+
+.place-card__title {
+  grid-area: title;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  align-self: end;
+}
+
+.place-card__author {
+  grid-area: author;
+  align-self: end;
+  font-size: 18px;
+}
+
+.place-card__image {
+  grid-area: image;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.place-card__image:hover {
+  filter: brightness(0.85);
+}
+
+.place-card__text {
+  grid-area: text;
+  font-size: 18px;
+  line-height: 1.63;
+  margin: 0;
+}
+
+.place-card__paragraph {
+  margin: 0;
+}
+
+.place-card__button {
+  grid-area: button;
+  align-self: start;
+  max-width: 289px;
+  padding: 13px 20px;
+  background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.place-card__button:hover {
+  filter: brightness(0.85);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .place-card {
+    grid-template-columns: 48% 48%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title author"
+      "image text"
+      "button text"
+      ". text";
+    column-gap: 28px;
+    row-gap: 48px;
+  }
+
+  .place-card__title {
+    font-size: 42px;
+  }
+
+  .place-card__text {
+    font-size: 16px;
+  }
+
+  .place-card__button {
+    width: 288px;
+    padding: 13px 20px;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .place-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "author"
+      "image"
+      "button"
+      "text";
+    row-gap: 30px;
+  }
+
+  .place-card__title {
+    font-size: 32px;
+    margin: 0 16px;
+  }
+
+  .place-card__author {
+    margin: 0 16px;
+  }
+
+  .place-card__text {
+    font-size: 16px;
+    margin: 0 16px;
+  }
+
+  .place-card__button {
+    width: 288px;
+    padding: 13px 20px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+}
