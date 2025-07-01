@@ -24,6 +24,12 @@
   grid-area: author;
   align-self: end;
   font-size: 18px;
+  margin: 0;
+}
+
+.place-card__author-info {
+  white-space: pre-line;
+  margin: 0;
 }
 
 .place-card__image {
@@ -65,11 +71,12 @@
   transition: 0.3s;
   box-sizing: border-box;
   white-space: nowrap;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .place-card__button:hover {
   filter: brightness(0.85);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -132,5 +139,6 @@
     padding: 13px 20px;
     margin: 0 auto;
     font-size: 14px;
+    background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
   }
 }
